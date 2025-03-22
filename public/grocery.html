@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeSync Grocery & Meal Planning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="grocery.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Grocery & Meal Planning</h1>
+            <button class="btn">Shopping Mode</button>
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active">Grocery List</div>
+            <div class="tab">Meal Planning</div>
+            <div class="tab">Recipes</div>
+        </div>
+        
+        <div class="content-area">
+            <div class="grocery-list">
+                <div class="section-header">
+                    <h2 class="section-title">Grocery List</h2>
+                    <button class="btn">Add Item</button>
+                </div>
+                
+                <div class="grocery-categories">
+                    <div class="category">
+                        <div class="category-name">Produce</div>
+                        <div class="grocery-item">
+                            <input type="checkbox" class="grocery-checkbox">
+                            <span class="grocery-label">Apples</span>
+                            <span class="grocery-quantity">6</span>
+                            <div class="grocery-actions">
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn">Delete</button>
+                            </div>
+                        </div>
+                        <div class="grocery-item">
+                            <input type="checkbox" class="grocery-checkbox">
+                            <span class="grocery-label">Bananas</span>
+                            <span class="grocery-quantity">1 bunch</span>
+                            <div class="grocery-actions">
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn">Delete</button>
+                            </div>
+                        </div>
+                        <div class="grocery-item">
+                            <input type="checkbox" class="grocery-checkbox">
+                            <span class="grocery-label">Spinach</span>
+                            <span class="grocery-quantity">1 bag</span>
+                            <div class="grocery-actions">
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <div class="category-name">Dairy</div>
+                        <div class="grocery-item">
+                            <input type="checkbox" class="grocery-checkbox">
+                            <span class="grocery-label">Milk</span>
+                            <span class="grocery-quantity">1 gallon</span>
+                            <div class="grocery-actions">
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn">Delete</button>
+                            </div>
+                        </div>
+                        <div class="grocery-item">
+                            <input type="checkbox" class="grocery-checkbox">
+                            <span class="grocery-label">Eggs</span>
+                            <span class="grocery-quantity">1 dozen</span>
+                            <div class="grocery-actions">
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn">Delete</button>
+                            </div>
+                        </div>
+                        <div class="grocery-item">
+                            <input type="checkbox" class="grocery-checkbox">
+                            <span class="grocery-label">Cheese</span>
+                            <span class="grocery-quantity">8 oz</span>
+                            <div class="grocery-actions">
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <div class="category-name">Meat & Seafood</div>
+                        <div class="grocery-item">
+                            <input type="checkbox" class="grocery-checkbox">
+                            <span class="grocery-label">Chicken Breast</span>
+                            <span class="grocery-quantity">2 lbs</span>
+                            <div class="grocery-actions">
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn">Delete</button>
+                            </div>
+                        </div>
+                        <div class="grocery-item">
+                            <input type="checkbox" class="grocery-checkbox">
+                            <span class="grocery-label">Ground Beef</span>
+                            <span class="grocery-quantity">1 lb</span>
+                            <div class="grocery-actions">
+                                <button class="action-btn">Edit</button>
+                                <button class="action-btn">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="add-item-form">
+                    <input type="text" class="form-input" placeholder="Add new item...">
+                    <button class="btn">Add</button>
+                </div>
+            </div>
+            
+            <div class="meal-plan">
+                <div class="section-header">
+                    <h2 class="section-title">Weekly Meal Plan</h2>
+                    <span>March 22-28, 2025</span>
+                </div>
+                
+                <div class="meal-days">
+                    <div class="meal-day active">Monday</div>
+                    <div class="meal-day">Tuesday</div>
+                    <div class="meal-day">Wednesday</div>
+                    <div class="meal-day">Thursday</div>
+                    <div class="meal-day">Friday</div>
+                    <div class="meal-day">Saturday</div>
+                    <div class="meal-day">Sunday</div>
+                </div>
+                
+                <div class="meal-slots">
+                    <div class="meal-slot">
+                        <div class="meal-slot-header">
+                            <span class="meal-type">Breakfast</span>
+                            <button class="action-btn">Edit</button>
+                        </div>
+                        <div class="meal-content">Oatmeal with fruit and nuts</div>
+                    </div>
+                    
+                    <div class="meal-slot">
+                        <div class="meal-slot-header">
+                            <span class="meal-type">Lunch</span>
+                            <button class="action-btn">Edit</button>
+                        </div>
+                        <div class="meal-content">Chicken salad sandwich with side salad</div>
+                    </div>
+                    
+                    <div class="meal-slot">
+                        <div class="meal-slot-header">
+                            <span class="meal-type">Dinner</span>
+                            <button class="action-btn">Edit</button>
+                        </div>
+                        <div class="meal-content">Spaghetti Bolognese with garlic bread</div>
+                    </div>
+                    
+                    <div class="meal-slot">
+                        <div class="meal-slot-header">
+                            <span class="meal-type">Snacks</span>
+                            <button class="action-btn">Edit</button>
+                        </div>
+                        <div class="meal-content empty">No snacks planned</div>
+                    </div>
+                </div>
+                
+                <button class="generate-list-btn">Generate Grocery List from Meal Plan</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

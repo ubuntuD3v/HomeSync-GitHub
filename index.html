@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeSync - Household Management Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4285F4;
+            --secondary-color: #34A853;
+            --background-color: #F8F9FA;
+            --text-color: #202124;
+            --light-gray: #E8EAED;
+            --white: #FFFFFF;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #3367D6;
+        }
+        
+        .hero {
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #5F6368;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .features {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #5F6368;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon i {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .screenshots {
+            padding: 80px 0;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta .btn {
+            background-color: var(--white);
+            color: var(--primary-color);
+            font-size: 18px;
+            padding: 15px 30px;
+        }
+        
+        .cta .btn:hover {
+            background-color: var(--light-gray);
+        }
+        
+        footer {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #5F6368;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--light-gray);
+            color: #5F6368;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 20px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>HomeSync</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#documentation">Documentation</a></li>
+                    <li><a href="https://github.com/ubuntuD3v/HomeSync-GitHub" class="btn">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Simplify Your Household Management</h2>
+            <p>HomeSync is a comprehensive platform that centralizes tasks, grocery planning, chores, bills, maintenance, and community marketplace in one integrated solution.</p>
+            <a href="#features" class="btn">Explore Features</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+                <p>HomeSync brings together all the tools you need to manage your household efficiently.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Smart Task Scheduler</h3>
+                    <p>Organize and prioritize household tasks with intelligent scheduling, calendar integration, and customizable reminders.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3>Grocery & Meal Planning</h3>
+                    <p>Plan your meals for the week and automatically generate shopping lists based on your meal plan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧹</div>
+                    <h3>Chore Delegation</h3>
+                    <p>Assign and track household chores with a gamification system that makes cleaning fun and competitive.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Bill Payment & Budgeting</h3>
+                    <p>Keep track of all your bills in one place, receive payment reminders, and analyze your spending patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Home Maintenance</h3>
+                    <p>Track appliance warranties, schedule maintenance tasks, and receive alerts for upcoming service needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏘️</div>
+                    <h3>Community Marketplace</h3>
+                    <p>Exchange goods and services with neighbors, borrow items, and build a stronger community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-title">
+                <h2>Platform Screenshots</h2>
+                <p>Take a look at HomeSync's clean, intuitive interface with a light aesthetic theme.</p>
+            </div>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="./public/dashboard.png" alt="Dashboard">
+                </div>
+                <div class="screenshot-item">
+                    <img src="./public/tasks.png" alt="Task Scheduler">
+                </div>
+                <div class="screenshot-item">
+                    <img src="./public/grocery.png" alt="Grocery Planning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="documentation" id="documentation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Documentation</h2>
+                <p>Comprehensive guides and documentation to help you get started with HomeSync.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>User Guide</h3>
+                    <p>Detailed instructions for using all features of the HomeSync platform.</p>
+                    <a href="./docs/user_guide.md" class="btn">View Guide</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Technical Documentation</h3>
+                    <p>In-depth technical information about the platform's architecture and implementation.</p>
+                    <a href="./docs/technical_documentation.md" class="btn">View Docs</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>Presentation</h3>
+                    <p>Overview of the HomeSync platform, its features, and benefits.</p>
+                    <a href="./docs/presentation.md" class="btn">View Presentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Simplify Your Household Management?</h2>
+            <p>Get started with HomeSync today and experience the convenience of having all your household management tools in one place.</p>
+            <a href="https://github.com/yourusername/HomeSync-GitHub" class="btn">View on GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>HomeSync</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li><a href="./docs/user_guide.md">User Guide</a></li>
+                        <li><a href="./docs/technical_documentation.md">Technical Documentation</a></li>
+                        <li><a href="./docs/presentation.md">Presentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>GitHub</h3>
+                    <ul>
+                        <li><a href="https://github.com/yourusername/HomeSync-GitHub">Repository</a></li>
+                        <li><a href="https://github.com/yourusername/HomeSync-GitHub/issues">Issues</a></li>
+                        <li><a href="https://github.com/yourusername/HomeSync-GitHub/pulls">Pull Requests</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 HomeSync. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

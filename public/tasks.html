@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeSync Task Scheduler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tasks.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Task Scheduler</h1>
+            <button class="btn">Add New Task</button>
+        </div>
+        
+        <div class="task-filters">
+            <div class="filter-group">
+                <label for="status-filter">Status</label>
+                <select id="status-filter">
+                    <option value="all">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="priority-filter">Priority</label>
+                <select id="priority-filter">
+                    <option value="all">All</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="category-filter">Category</label>
+                <select id="category-filter">
+                    <option value="all">All</option>
+                    <option value="home">Home</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="health">Health</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="assigned-filter">Assigned To</label>
+                <select id="assigned-filter">
+                    <option value="all">All</option>
+                    <option value="me">Me</option>
+                    <option value="john">John</option>
+                    <option value="sarah">Sarah</option>
+                    <option value="mike">Mike</option>
+                    <option value="emma">Emma</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="task-list">
+            <div class="task-list-header">
+                <div></div>
+                <div>Task</div>
+                <div>Due Date</div>
+                <div>Priority</div>
+                <div>Assigned To</div>
+                <div>Actions</div>
+            </div>
+            
+            <div class="task-item">
+                <div class="task-checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="task-title">Take out the trash</div>
+                <div class="task-due-date">Today</div>
+                <div><span class="task-priority priority-high">High</span></div>
+                <div>John</div>
+                <div class="task-actions">
+                    <button class="action-btn">Edit</button>
+                    <button class="action-btn">Delete</button>
+                </div>
+            </div>
+            
+            <div class="task-item">
+                <div class="task-checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="task-title">Pay electricity bill</div>
+                <div class="task-due-date">Mar 25, 2025</div>
+                <div><span class="task-priority priority-medium">Medium</span></div>
+                <div>Sarah</div>
+                <div class="task-actions">
+                    <button class="action-btn">Edit</button>
+                    <button class="action-btn">Delete</button>
+                </div>
+            </div>
+            
+            <div class="task-item">
+                <div class="task-checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="task-title">Buy groceries for dinner</div>
+                <div class="task-due-date">Today</div>
+                <div><span class="task-priority priority-medium">Medium</span></div>
+                <div>Me</div>
+                <div class="task-actions">
+                    <button class="action-btn">Edit</button>
+                    <button class="action-btn">Delete</button>
+                </div>
+            </div>
+            
+            <div class="task-item">
+                <div class="task-checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="task-title">Schedule HVAC maintenance</div>
+                <div class="task-due-date">Mar 30, 2025</div>
+                <div><span class="task-priority priority-low">Low</span></div>
+                <div>Mike</div>
+                <div class="task-actions">
+                    <button class="action-btn">Edit</button>
+                    <button class="action-btn">Delete</button>
+                </div>
+            </div>
+            
+            <div class="task-item">
+                <div class="task-checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="task-title">Call plumber about leaky faucet</div>
+                <div class="task-due-date">Mar 24, 2025</div>
+                <div><span class="task-priority priority-high">High</span></div>
+                <div>Emma</div>
+                <div class="task-actions">
+                    <button class="action-btn">Edit</button>
+                    <button class="action-btn">Delete</button>
+                </div>
+            </div>
+            
+            <div class="task-item">
+                <div class="task-checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="task-title">Renew car insurance</div>
+                <div class="task-due-date">Apr 5, 2025</div>
+                <div><span class="task-priority priority-medium">Medium</span></div>
+                <div>Me</div>
+                <div class="task-actions">
+                    <button class="action-btn">Edit</button>
+                    <button class="action-btn">Delete</button>
+                </div>
+            </div>
+            
+            <div class="task-item">
+                <div class="task-checkbox">
+                    <input type="checkbox">
+                </div>
+                <div class="task-title">Clean out garage</div>
+                <div class="task-due-date">Apr 10, 2025</div>
+                <div><span class="task-priority priority-low">Low</span></div>
+                <div>John</div>
+                <div class="task-actions">
+                    <button class="action-btn">Edit</button>
+                    <button class="action-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">Next</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeSync Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">HomeSync Dashboard</h1>
+            <div class="dashboard-actions">
+                <button class="dashboard-button">Add Task</button>
+                <button class="dashboard-button">Add Bill</button>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="dashboard-main">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Upcoming Tasks</h2>
+                        <span>View All</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Take out the trash</span>
+                            <span class="task-priority high">High</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Pay electricity bill</span>
+                            <span class="task-priority medium">Medium</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Buy groceries for dinner</span>
+                            <span class="task-priority medium">Medium</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Schedule HVAC maintenance</span>
+                            <span class="task-priority low">Low</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Bills Due Soon</h2>
+                        <span>View All</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="task-item">
+                            <span class="task-label">Electricity Bill</span>
+                            <span>$85.50</span>
+                            <span>Due in 3 days</span>
+                        </div>
+                        <div class="task-item">
+                            <span class="task-label">Internet</span>
+                            <span>$65.00</span>
+                            <span>Due in 5 days</span>
+                        </div>
+                        <div class="task-item">
+                            <span class="task-label">Water</span>
+                            <span>$42.75</span>
+                            <span>Due in 10 days</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Grocery List</h2>
+                        <span>View All</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Milk (1 gallon)</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Eggs (1 dozen)</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Bread</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Chicken (2 lbs)</span>
+                        </div>
+                        <div class="task-item">
+                            <input type="checkbox" class="task-checkbox">
+                            <span class="task-label">Apples (6)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-sidebar">
+                <div class="dashboard-card calendar-widget">
+                    <div class="card-header">
+                        <h2 class="card-title">Calendar</h2>
+                        <span>March 2025</span>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day">Su</div>
+                        <div class="calendar-day">Mo</div>
+                        <div class="calendar-day">Tu</div>
+                        <div class="calendar-day">We</div>
+                        <div class="calendar-day">Th</div>
+                        <div class="calendar-day">Fr</div>
+                        <div class="calendar-day">Sa</div>
+                        
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day">16</div>
+                        <div class="calendar-day">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day">21</div>
+                        <div class="calendar-day today">22</div>
+                        <div class="calendar-day has-events">23</div>
+                        <div class="calendar-day has-events">24</div>
+                        <div class="calendar-day">25</div>
+                        <div class="calendar-day has-events">26</div>
+                        <div class="calendar-day">27</div>
+                        <div class="calendar-day">28</div>
+                        <div class="calendar-day">29</div>
+                        <div class="calendar-day">30</div>
+                        <div class="calendar-day">31</div>
+                    </div>
+                </div>
+                <div class="dashboard-card activity-feed">
+                    <div class="card-header">
+                        <h2 class="card-title">Activity Feed</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-item">
+                            <div class="activity-avatar"></div>
+                            <div class="activity-content">
+                                <div><span class="activity-user">John</span> completed the task "Mow the lawn"</div>
+                                <div class="activity-time">10 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar"></div>
+                            <div class="activity-content">
+                                <div><span class="activity-user">Sarah</span> added "Pasta" to the grocery list</div>
+                                <div class="activity-time">25 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar"></div>
+                            <div class="activity-content">
+                                <div><span class="activity-user">Mike</span> paid the Internet bill</div>
+                                <div class="activity-time">1 hour ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar"></div>
+                            <div class="activity-content">
+                                <div><span class="activity-user">Emma</span> added a new task "Call plumber"</div>
+                                <div class="activity-time">2 hours ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* Task scheduler mockup styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #202124;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #4285F4;
+  margin: 0;
+}
+
+.btn {
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #3367D6;
+}
+
+.task-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  color: #5f6368;
+  margin-bottom: 5px;
+}
+
+.filter-group select {
+  padding: 8px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+}
+
+.task-list {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.task-list-header {
+  display: grid;
+  grid-template-columns: 50px 3fr 1fr 1fr 1fr 100px;
+  padding: 15px;
+  background-color: #f1f3f4;
+  font-weight: 500;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: 50px 3fr 1fr 1fr 1fr 100px;
+  padding: 15px;
+  border-bottom: 1px solid #dadce0;
+  align-items: center;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-checkbox {
+  justify-self: center;
+}
+
+.task-title {
+  font-weight: 500;
+}
+
+.task-due-date {
+  color: #5f6368;
+}
+
+.task-priority {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-align: center;
+  width: fit-content;
+}
+
+.priority-high {
+  background-color: #fad2cf;
+  color: #d93025;
+}
+
+.priority-medium {
+  background-color: #feefc3;
+  color: #b06000;
+}
+
+.priority-low {
+  background-color: #ceead6;
+  color: #137333;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #5f6368;
+}
+
+.action-btn:hover {
+  color: #4285F4;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.page-btn {
+  padding: 8px 12px;
+  border: 1px solid #dadce0;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: #4285F4;
+  color: white;
+  border-color: #4285F4;
+}
+
+.page-btn:hover:not(.active) {
+  background-color: #f1f3f4;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "homesync-github",
+  "version": "1.0.0",
+  "description": "A comprehensive SaaS platform for household management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "household",
+    "management",
+    "tasks",
+    "grocery",
+    "chores",
+    "bills",
+    "maintenance",
+    "marketplace"
+  ],
+  "author": "HomeSync Team",
+  "license": "MIT",
+  "homepage": "https://ubuntuD3v.github.io/HomeSync-GitHub",
+  "dependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
